@@ -1,0 +1,97 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+video,
+.img-tesla {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.logo {
+    filter: brightness(100);
+    position: fixed;
+    width: 250px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.subtitulo {
+    color: white;
+}
+
+.info-carro {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.rodape {
+    text-align: center;
+}
+
+button {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: white;
+    padding: 7px 80px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.testdrive {
+    color: black;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.texto-rodape {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.formulario-compra{
+    position: fixed;
+    top: 40px;
+    width: 600px;
+    height: 100%;
+    z-index: 3;
+    left: -34%;
+    transition: 1.5s;
+}
+
+.formulario-testdrive{
+    position: fixed;
+    top: 40px;
+    width: 600px;
+    height: 100%;
+    z-index: 3;
+    left: -34%;
+    transition: 1.5s;
+}

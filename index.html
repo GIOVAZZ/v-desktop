@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        /* Estilos básicos para a página */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Fundo preto */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Oculta barras de rolagem */
+            position: relative; /* Para a animação do fundo */
+            color: #fff; /* Cor do texto padrão */
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Garante que o botão fique acima da animação */
+        }
+
+        .btn {
+            background-color: #1e90ff; /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            padding: 15px 30px; /* Espaçamento interno do botão */
+            font-size: 20px; /* Tamanho da fonte */
+            border: none; /* Remove a borda padrão */
+            border-radius: 8px; /* Bordas arredondadas */
+            text-decoration: none; /* Remove o sublinhado do link */
+            display: inline-block; /* Alinha o botão como um bloco inline */
+            cursor: pointer; /* Cursor de mão para indicar clicável */
+            transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s; /* Transições suaves */
+            box-shadow: 0 0 15px rgba(30, 144, 255, 0.8); /* Efeito de brilho */
+            font-weight: bold; /* Texto em negrito */
+        }
+
+        .btn:hover {
+            background-color: #4682b4; /* Cor de fundo ao passar o mouse */
+            transform: scale(1.1); /* Leve aumento ao passar o mouse */
+            box-shadow: 0 0 25px rgba(30, 144, 255, 1); /* Aumenta o brilho ao passar o mouse */
+        }
+
+        .btn:active {
+            background-color: #ffffff; /* Cor de fundo quando clicado */
+            transform: scale(0.98); /* Leve diminuição ao clicar */
+        }
+
+        /* Animação de fundo */
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+            background-size: 200% 200%;
+            animation: backgroundAnimation 12s ease infinite;
+            z-index: 0; /* Fica atrás do conteúdo principal */
+            opacity: 0.5; /* Leve transparência para o fundo */
+        }
+
+        /* Adiciona um texto de boas-vindas */
+        .welcome-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div> <!-- Div para a animação de fundo -->
+    <div class="container">
+        <div class="welcome-text">Bem-vindo!</div>
+        <a href="./dark-hack/home/index.html" class="btn">Acessar Portfólio</a>
+    </div>
+</body>
+</html>

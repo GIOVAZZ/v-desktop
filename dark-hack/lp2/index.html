@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playstation WebStore</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" href="assets/images/logo.svg" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="navBar">
+        <img src="assets/images/logo.svg" class="logo" />
+
+        <nav>
+          <ul id="menuLinks">
+            <li><a href="">Controles para Games</a></li>
+            <li><a href="">Acessórios VR</a></li>
+            <li><a href="">Controles de mídia</a></li>
+            <li><a href="">Outros</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão de alternância de modo escuro -->
+        <button id="toggleDarkMode">Modo Escuro</button>
+
+        <!-- Quando clicarmos no menu, abre o dropdown com links: -->
+        <div
+          class="menu"
+          aria-label="Abrir Menu"
+          onclick="toggleMenu(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        >
+          <svg width="45" height="50" viewBox="0 0 100 100">
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+            />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col1">
+          <h2>
+            PS4 V2 <br />
+            DualShock 4
+          </h2>
+          <h3>Controle sem fio para Playstation 4</h3>
+          <p>(Compatível com PS5)</p>
+          <h4>R$150,00</h4>
+          <button type="button" class="buy-now-button">
+            Compre Agora <img src="assets/images/arrow.png" />
+          </button>
+        </div>
+
+        <div class="col2">
+          <img src="assets/images/controller.png" class="controller" />
+          <div class="controllerBackground"></div>
+
+          <div class="addCartBtn">
+            <img src="assets/images/add.png" alt="" />
+            <p><small>Adicionar ao carrinho</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="socialLinks">
+        <img src="assets/images/fb.svg" alt="FacebookIconLink" />
+        <img src="assets/images/ig.svg" alt="InstagramIconLink" />
+        <img src="assets/images/tw.svg" alt="TwitterIconLink" />
+      </div>
+    </main>
+
+    <script>
+      let menuLinks = document.getElementById("menuLinks");
+      menuLinks.style.maxHeight = "0px";
+
+      function toggleMenu() {
+        if (menuLinks.style.maxHeight === "0px") {
+          menuLinks.style.maxHeight = "130px";
+        } else {
+          menuLinks.style.maxHeight = "0px";
+        }
+      }
+
+      // Função para alternar entre modo claro e modo escuro
+      document.getElementById('toggleDarkMode').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.navBar').classList.toggle('dark-mode');
+        document.querySelectorAll('button').forEach(btn => btn.classList.toggle('dark-mode'));
+      });
+    </script>
+  </body>
+</html>

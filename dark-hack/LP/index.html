@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="src/css/style.css">
+    <title>Tesla</title>
+</head>
+
+<body>
+
+    <img src="./src/imagens/logo.png" alt="logo da tesla" class="logo">
+
+    <ul class="lista">
+        <li class="item">
+            <video src="./src/imagens/tesla.mp4" muted autoplay loop></video>
+
+            <div class="info-carro">
+                <h1>Model Y</h1>
+                <p class="subtitulo">Compre agora o seu Tesla model Y com parcelas a partir de 499 dólares</p>
+            </div>
+
+            <div class="rodape">
+                <button onclick="aparecerFormularioCompra()">Comprar Agora</button>
+                <button onclick="aparecerFormularioTestdrive()" class="testdrive">Faça um Test-Drive</button>
+                <p class="texto-rodape">Não garantimos seu veículo imediatamente. Consultar estoque*.</p>
+            </div>
+        </li>
+
+        <li class="item">
+            <img src="./src/imagens/model-x.png" class="img-tesla" alt="imagem model x">
+
+            <div class="info-carro">
+                <h1>Model X</h1>
+                <p class="subtitulo">Compre agora o seu Tesla model X</p>
+            </div>
+        </li>
+
+        <li class="item">
+            <img src="./src/imagens/model-s.png" class="img-tesla" alt="imagem model s">
+
+            <div class="info-carro">
+                <h1>Model S</h1>
+                <p class="subtitulo">Compre agora o seu Tesla Model S</p>
+            </div>
+        </li>
+    </ul>
+    <div class="formulario-compra">
+        <button onclick="desaparecerFormularioCompra()">Fechar</button>
+        <script type="text/javascript" src="https://form.jotform.com/jsform/241945427450054"></script>
+    </div>
+    <div class="formulario-testdrive">
+        <button onclick="desaparecerFormularioTestdrive()">Fechar</button>
+        <script type="text/javascript" src="https://form.jotform.com/jsform/241946385846067"></script>
+    </div>
+</body>
+
+<script src="./src/js/script.js"></script>
+
+</html>
